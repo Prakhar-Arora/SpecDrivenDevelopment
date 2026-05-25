@@ -129,7 +129,7 @@ The hint progression typically follows this pattern:
 1. **Navigate to frontend directory:**
 
    ```bash
-   cd app/frontend
+   cd frontend
    ```
 
 2. **Install dependencies:**
@@ -161,34 +161,36 @@ Interactive API documentation is available when the backend is running:
 ├── backend/                     # FastAPI backend
 │   ├── app/
 │   │   ├── main.py              # FastAPI application and endpoints
+│   │   ├── models.py            # Data models and schemas
 │   │   ├── science_quizzes.py   # Science quiz questions (8 advanced quizzes)
 │   │   ├── history_quizzes.py   # History quiz questions (8 advanced quizzes)
 │   │   ├── celebrity_quizzes.py # Celebrity quiz questions (8 advanced quizzes)
 │   │   └── __init__.py
-│   ├── requirements.txt          # Python dependencies
-│   └── .gitignore               # Git ignore rules
-└── app/                         # Frontend application
-    └── frontend/                # React application (Vite)
-        ├── src/
-        │   ├── components/       # React components
-        │   │   ├── Home.jsx      # Home page with category selection
-        │   │   ├── Quiz.jsx      # Quiz interface with hints system
-        │   │   ├── Loading.jsx   # Loading component
-        │   │   └── Error.jsx     # Error component
-        │   ├── styles/           # CSS stylesheets
-        │   │   ├── globals.css   # Global styles and animations
-        │   │   ├── Home.css      # Home page styles
-        │   │   ├── Quiz.css      # Quiz interface styles
-        │   │   ├── Loading.css   # Loading component styles
-        │   │   └── Error.css     # Error component styles
-        │   ├── App.jsx           # Main App component
-        │   ├── main.jsx          # Entry point
-        │   ├── App.css           # App styles
-        │   └── index.css         # Global CSS
-        ├── public/               # Static files
-        ├── package.json          # npm dependencies
-        ├── vite.config.js        # Vite configuration
-        └── index.html            # HTML template
+│   └── requirements.txt          # Python dependencies
+└── frontend/                    # React application (Vite)
+    ├── src/
+    │   ├── components/           # React components
+    │   │   ├── Home.jsx          # Home page with category selection
+    │   │   ├── Quiz.jsx          # Quiz interface with hints system
+    │   │   ├── Loading.jsx       # Loading component
+    │   │   └── Error.jsx         # Error component
+    │   ├── styles/               # CSS stylesheets
+    │   │   ├── globals.css       # Global styles and animations
+    │   │   ├── Home.css          # Home page styles
+    │   │   ├── Quiz.css          # Quiz interface styles
+    │   │   ├── Loading.css       # Loading component styles
+    │   │   └── Error.css         # Error component styles
+    │   ├── assets/               # Static assets
+    │   ├── App.jsx               # Main App component
+    │   ├── App.css               # App component styles
+    │   ├── main.jsx              # Entry point
+    │   └── index.css             # Global CSS
+    ├── public/                   # Static files
+    ├── package.json              # npm dependencies
+    ├── vite.config.js            # Vite configuration
+    ├── eslint.config.js          # ESLint configuration
+    ├── README.md                 # Frontend-specific documentation
+    └── index.html                # HTML template
 ```
 
 ## Development
