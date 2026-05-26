@@ -113,6 +113,6 @@ Once the server is running, visit:
 
 ---
 
-**Built with ❤️ for better healthcare management**
+**Built with ❤️**
 
-*Last Updated: April 2026*
+*Last Updated: May 2026*
