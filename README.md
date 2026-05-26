@@ -103,8 +103,8 @@ Once the server is running, visit:
 ✓ Progressive hint system  
 ✓ Interactive API documentation  
 ✓ RESTful endpoint design  
----
 
+---
 ## Project Credits
 
 **Project Maintainer**: Prakhar Arora
