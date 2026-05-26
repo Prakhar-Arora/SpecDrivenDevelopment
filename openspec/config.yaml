@@ -1,0 +1,77 @@
+schema: spec-driven
+
+# Project Context & Conventions
+# This is the primary AI memory for consistent Copilot behavior.
+
+context: |
+  # Quiz Service API - Repository Memory
+  
+  ## Tech Stack
+  - Backend: FastAPI 0.95+, Python 3.7+, Uvicorn
+  - Frontend: Node.js, npm
+  - Entry Point: backend/app/main.py
+  - API Docs: /docs (Swagger), /redoc (ReDoc)
+  
+  ## Architecture
+  - Directory Structure: backend/app/, frontend/, openspec/specs/, openspec/changes/
+  - API Pattern: GET /<category> endpoints (nature, old, fame)
+  - Response Format: {id, category, hints[], answer}
+  - Extensible: New categories follow /<category> pattern; new features via OpenSpec changes
+  
+  ## Python Conventions
+  - Files: snake_case (main.py, quiz_service.py)
+  - Functions: snake_case (get_nature_quiz(), process_hint())
+  - Classes: PascalCase (QuizService, HintGenerator)
+  - Constants: UPPER_SNAKE_CASE (MAX_HINTS, DEFAULT_TIMEOUT)
+  - Style: PEP 8, 88-char line length, type hints, Google-style docstrings
+  
+  ## JavaScript/Node Conventions
+  - Files: camelCase or PascalCase components (quizCard.js, QuizCard.jsx)
+  - Functions: camelCase (handleGuess(), getHints())
+  - Constants: UPPER_SNAKE_CASE (API_BASE_URL, MAX_RETRIES)
+  - Style: Standard JS conventions, 2 or 4 space indentation, ESLint config
+  
+  ## Git Conventions
+  - Commits: <type>(<scope>): <subject> (feat/fix/docs/refactor/test/chore)
+  - Branches: main (stable), develop (integration), feature/<name>, fix/<name>
+  - Examples: feat(backend): add hint validation; fix(frontend): quiz card rendering
+  
+  ## OpenSpec Workflow Rules
+  - Propose (/opsx:propose): New features, architecture changes, cross-module refactors
+  - Skip for: Trivial fixes, cleanup, experimental spikes
+  - Change Lifecycle: propose → explore → apply → archive
+  - Location: openspec/changes/<name>/ → openspec/changes/archive/YYYY-MM-DD-<name>/
+  - Delta specs sync to openspec/specs/ on archive
+  
+  ## Scaling Principles
+  - Adding Categories: Follow /<category> pattern, reuse response format, update API docs, add spec
+  - Adding Features: Create formal change, design cross-layer, apply systematically, archive with specs
+  - Code Quality: PR review, unit/integration tests, keep docs in sync, use OpenSpec for major refactors
+  - Repository Growth: Consistent conventions ensure maintainability; specs formalize patterns
+  
+  ## Copilot Behavior Expectations
+  - Follow naming conventions (Python snake_case/PascalCase, JS camelCase) without reminding
+  - Respect architecture boundaries (backend/ vs frontend/, no cross-pollution)
+  - Replicate existing patterns; don't introduce new idioms
+  - Reference openspec/specs/<capability>/spec.md when uncertain
+  - Maintain consistency with existing code style
+  - Suggest formal changes via OpenSpec for scope-warranting work
+  - Prioritize clarity over cleverness
+
+# Per-artifact rules (schema-specific constraints)
+rules:
+  proposal:
+    - Include "Scope" and "Non-goals" sections
+    - Reference existing specs when relevant
+    - Keep under 1000 words unless justified
+    - Link to related capabilities in openspec/specs/
+  design:
+    - Sketch API changes with example requests/responses
+    - Reference backend and frontend layers if applicable
+    - Note any new conventions or patterns introduced
+    - Consider data models, state management, testing approach
+  tasks:
+    - Break into chunks of 1-2 hours each
+    - Include both backend and frontend work if cross-layer
+    - Reference design.md for architectural context
+    - Mark complete as implemented; update design/specs if discovery occurs
