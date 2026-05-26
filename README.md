@@ -104,6 +104,7 @@ Once the server is running, visit:
 ✓ Interactive API documentation  
 ✓ RESTful endpoint design  
 
+---
 ## Project Credits
 
 **Project Maintainer**: Prakhar Arora
@@ -111,7 +112,6 @@ Once the server is running, visit:
 - Email: [shri.prakhar.arora@gmail.com](mailto:shri.prakhar.arora@gmail.com)
 - GitHub: [@Prakhar-Arora](https://github.com/Prakhar-Arora)
 
----
 
 **Built with ❤️**
 
