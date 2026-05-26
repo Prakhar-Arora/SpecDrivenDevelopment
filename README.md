@@ -103,6 +103,7 @@ Once the server is running, visit:
 ✓ Progressive hint system  
 ✓ Interactive API documentation  
 ✓ RESTful endpoint design  
+---
 
 ## Project Credits
 
@@ -111,8 +112,7 @@ Once the server is running, visit:
 - Email: [shri.prakhar.arora@gmail.com](mailto:shri.prakhar.arora@gmail.com)
 - GitHub: [@Prakhar-Arora](https://github.com/Prakhar-Arora)
 
----
 
-**Built with ❤️ for better healthcare management**
+**Built with ❤️**
 
-*Last Updated: April 2026*
+*Last Updated: May 2026*
